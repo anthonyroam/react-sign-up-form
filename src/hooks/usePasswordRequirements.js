@@ -12,8 +12,9 @@ const usePasswordRequirements = () => {
     const hasLowerCaseRegex = /(?=.*[a-z])/
     const hasSpecialCharacterRegex = /(?=.*[@!#$%&? "])/
 
-    const handleChange= (event) => {
-        
+    const handleChange= (event, dispatch) => {
+        dispatch({type: "PASSWORD_SUCCESS"})
+
         let password = event.target.value
 
         password.length >= 8

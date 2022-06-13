@@ -1,5 +1,4 @@
 import React from "react";
-import { usePasswordRequirements } from "./usePasswordRequirements";
 
 function useInputError () {
     const [state, dispatch] = React.useReducer(reducer, initialState); 
@@ -25,7 +24,6 @@ function useInputError () {
             password: formData.get("password"),
             confirmPassword: formData.get("confirmPassword")
         }
-        console.log(data);
 
         data.firstName 
         ? dispatch({type: "FIRSTNAME_SUCCESS"}) 

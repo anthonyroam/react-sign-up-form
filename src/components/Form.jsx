@@ -17,6 +17,7 @@ const Form = () => {
         confirmPasswordError,
         handleSubmit,
         handleChange,
+        dispatch,
     } = useInputError()
 
     return (
@@ -60,6 +61,7 @@ const Form = () => {
                     placeholder="Password" 
                     name="password" 
                     error={passwordError} 
+                    dispatch={dispatch}
                 />
             </InputContainer>
             <InputContainer>

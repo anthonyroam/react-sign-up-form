@@ -2,7 +2,7 @@ import React from "react";
 import { PasswordRequirement } from "./PasswordRequirements";
 import { usePasswordRequirements } from "../hooks/usePasswordRequirements";
 
-const InputPassword = ({type, name, placeholder, error}) => {
+const InputPassword = ({type, name, placeholder, error, dispatch}) => {
     const {
         numberOfCharacters,
         number,
@@ -19,7 +19,7 @@ const InputPassword = ({type, name, placeholder, error}) => {
             <input 
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
-                onChange={e => handleChange(e)}            
+                onChange={e => handleChange(e, dispatch)}            
                 type={type}
                 placeholder={!error ? placeholder : null}
                 name={name}
